@@ -11,7 +11,7 @@ To get started right away:
 * start the development server with `yarn start`
 
 ## Tested
-This was tested on expo on both ios and the ios simulator. I didn't test it on android.
+This was tested on [Expo](https://docs.expo.io/versions/latest/) on both iOS and the iOS simulator. I didn't test it on android.
 
 ## Create React Natve App
 
