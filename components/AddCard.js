@@ -13,6 +13,7 @@ class AddCard extends Component {
   }
 
   onQuestionChange = (text) => {
+
     this.setState({ question: text })
   }
 
@@ -22,7 +23,7 @@ class AddCard extends Component {
 
   onAddtButton = () => {
     const { question, answer } = this.state
-    if(question) {
+    if(question && answer) {
       const deck = this.props.navigation.state.params.name
       this.props.addCard({ question, answer, deck })
       addCardToDeck(deck, { question, answer })
