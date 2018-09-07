@@ -1,6 +1,6 @@
 
 import { StyleSheet } from 'react-native'
-import { blue, white } from '../utils/colors'
+import { blue, white, red, green } from '../utils/colors'
 
 export const styles = StyleSheet.create({
   container: {
@@ -43,6 +43,31 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     color: blue,
+    fontSize: 24,
+    textAlign: 'center'
+  },
+  buttonGreen: {
+    backgroundColor: green,
+    borderColor: blue,
+    padding: 10,
+    borderRadius: 10,
+    height: 50,
+    marginLeft: 50,
+    marginRight: 50,
+    marginTop: 50
+  },
+  buttonRed: {
+    backgroundColor: red,
+    borderColor: blue,
+    padding: 10,
+    borderRadius: 10,
+    height: 50,
+    marginLeft: 50,
+    marginRight: 50,
+    marginTop: 50
+  },
+  buttonTextWhite: {
+    color: white,
     fontSize: 24,
     textAlign: 'center'
   },

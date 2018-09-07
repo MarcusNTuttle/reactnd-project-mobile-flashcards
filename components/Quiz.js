@@ -24,11 +24,11 @@ class Quiz extends Component {
   renderAnswerOptions() {
     return (
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.button, {backgroundColor: 'green'}]} onPress={() => this.onPressSelectAnswer(true)}>
-          <Text style={[styles.buttonText, {color: 'white'}]}>Correct</Text>
+        <TouchableOpacity style={styles.buttonGreen} onPress={() => this.onPressSelectAnswer(true)}>
+          <Text style={styles.buttonTextWhite}>Correct</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, {backgroundColor: 'red'}]} onPress={() => this.onPressSelectAnswer(false)}>
-          <Text style={[styles.buttonText, {color: 'white'}]}>Wrong</Text>
+        <TouchableOpacity style={styles.buttonRed} onPress={() => this.onPressSelectAnswer(false)}>
+          <Text style={styles.buttonTextWhite}>Wrong</Text>
         </TouchableOpacity>
       </View>
     )
@@ -43,6 +43,8 @@ class Quiz extends Component {
     const length = decks[name].questions.length
     const answer = decks[name].questions[count].answer
 
+    this.setState({ showAnswer: false }) // prevents answer from continuing to show when moving to the next question
+
     if (selectedAnswer) {
       this.setState({ correct: this.state.correct + 1 })
     }
@@ -50,6 +52,7 @@ class Quiz extends Component {
     if (count >= length - 1) {
       this.setState({ finished: true })
 
+      clearLocalNotification().then(setLocalNotification()) 
     } else {
       this.setState({ count: this.state.count + 1 })
     }
