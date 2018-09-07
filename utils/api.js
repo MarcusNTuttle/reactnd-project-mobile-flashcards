@@ -6,12 +6,12 @@ const initialData = {
     title: 'React',
     questions: [
       {
-        question: 'Does React work with Android?',
-        answer: true
+        question: 'What is React?',
+        answer: 'A library for managing user interfaces'
       },
       {
-        question: 'React is a Framework developed by Google?',
-        answer: false
+        question: 'Where do you make Ajax requests in React?',
+        answer: 'The componentDidMount lifecycle event'
       }
     ]
   },
@@ -19,8 +19,8 @@ const initialData = {
     title: 'JavaScript',
     questions: [
       {
-        question: 'Closure is a combination of function?',
-        answer: true
+        question: 'What is a closure?',
+        answer: 'The combination of a function and the lexical environment within which that function was declared.'
       }
     ]
   }
