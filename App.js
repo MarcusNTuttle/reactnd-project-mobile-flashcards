@@ -72,7 +72,7 @@ const MainNavigator = StackNavigator({
     screen: AddCard,
     navigationOptions: ({ navigation }) => ({
       headerTintColor: white,
-      title: `${navigation.state.params.name}`,
+      title: `Add Card to ${navigation.state.params.name}`,
       headerStyle: {
         backgroundColor: blue,
       }
@@ -82,7 +82,7 @@ const MainNavigator = StackNavigator({
     screen: Quiz,
     navigationOptions: ({ navigation }) => ({
       headerTintColor: white,
-      title: `${navigation.state.params.name}`,
+      title: `Quiz - ${navigation.state.params.name}`,
       headerStyle: {
         backgroundColor: blue,
       }
